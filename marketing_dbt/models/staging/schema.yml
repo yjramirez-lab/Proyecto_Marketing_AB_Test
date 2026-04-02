@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_leads
+    description: "Leads limpios y parseados desde el CSV origen."
+    columns:
+      - name: lead_id
+        description: "ID único del lead"
+        tests:
+          - unique
+          - not_null
+      - name: test_variant
+        description: "Variante A o B"
+        tests:
+          - accepted_values:
+              values: ['A', 'B']
+
+  - name: fct_ab_test_metrics
+    description: "Métricas agregadas por variante para el testing A/B."
+    columns:
+      - name: test_variant
+        tests:
+          - unique
+          - not_null

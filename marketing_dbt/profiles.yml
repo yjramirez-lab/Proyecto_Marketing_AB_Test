@@ -1,0 +1,9 @@
+marketing_duckdb:
+  outputs:
+    dev:
+      type: duckdb
+      path: marketing.duckdb
+      extensions:
+        - httpfs
+        - parquet
+  target: dev
