@@ -6,6 +6,9 @@ __pycache__/
 venv/
 .venv/
 
+# Notion template (solo para uso local / copy-paste)
+02_Notion_Portfolio.md
+
 # dbt artifacts (no need to commit compiled/target folders)
 marketing_dbt/target/
 marketing_dbt/dbt_packages/
